@@ -1,0 +1,77 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.error_outer_div{
+    width:100vw;
+    height:100vh;
+    position:reltive;
+    /* position:fixed;
+    top:0;
+    left:0;
+    z-index:1; */
+}
+
+.error_inner_div{
+    position:absolute;
+    left: 48%;
+    top: 25%;
+    transform: translate(-50%, 50%);
+    /* background-color: green; */
+    width:490px;
+    /* min-width:300px; */
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+.sad_icon{
+    width:30%;
+    /* background-color: yellow; */
+    text-align: center;
+    color: #5ee0aa;
+    
+}
+.sad_icon h1{
+    font-size: 7rem;
+}
+.message_div{
+    width:70%;
+    /* background-color: red; */
+    text-align: center;
+}
+
+.message_div h1{
+    font-size: 5rem;
+    color:#5ee0aa;
+}
+
+.home_btn{
+    padding:10px 15px;
+    text-decoration: none;
+    outline: none;
+    border-radius: 20px;
+    color:#05da81;
+    border: 2px solid #5ee0aa;
+    transform: 1s;
+    cursor:pointer;
+}
+.home_btn:hover{
+    background-color:#05da8131;
+    color:#05da81;
+    border: 2px solid #5ee0aa;
+}
+
+
+@media only screen and (max-width: 450px){
+    .error_inner_div{
+        width:98%;
+        margin:auto;
+    }
+    .sad_icon h1{
+        font-size: 5rem;
+    }
+    .message_div h1{
+        font-size: 3rem;
+    }
+}

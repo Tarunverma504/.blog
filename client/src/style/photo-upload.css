@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.photo-upload{
+    /* background-color: green; */
+    width:80%;
+    margin: auto;
+    margin-top:30vh;
+    text-align: center;
+}
+
+.fa-cloud-upload-alt{
+    color:#0077b6;
+    font-size: 100px;
+}
+.inputfile {
+	/* width: 0.1px; */
+	height: 5px;
+    
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+    
+}
+.inputfile-label{
+    margin: 20px 0px;
+    width:200px;
+    padding:10px 0px;
+    border: 1px solid #0077b6;
+    cursor: pointer;
+    overflow: auto;
+}
+
+.btn-upload{
+    margin: 20px 0px;
+    width:200px;
+    padding:10px 0px;
+    background-color:  #0077b6;
+    color: white;
+    cursor: pointer;
+    overflow: auto;
+}

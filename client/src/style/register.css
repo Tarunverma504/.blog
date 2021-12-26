@@ -1,0 +1,62 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.register-container{
+    background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)),url("../assests/thought-catalog-505eectW54k-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #cccccc;
+    object-fit: cover;
+    width:100%;
+    height:100vh;
+    padding-top:20vh;
+}
+.register-div{
+    background-color:rgba(0, 0, 0, 0.966);
+    padding:15px;
+    margin:auto;
+    width:330px;
+    text-align: center;
+    border:1px solid #5ee0aa;
+    border-radius: 25px;
+}
+.register-div h1{
+    text-align: center;
+    color:#5ee0aa;
+    padding-bottom:6px;
+    font-size:50px;
+
+}
+.register-div input{
+    width:80%;
+    margin:10px auto 10px auto;
+    text-align: center;
+    border-radius: 20px;
+    padding:5px 0px 5px 0px;
+    background-color: transparent;
+    border:1px solid #5ee0aa;
+    color:#5ee0aa;
+
+}
+.register-div input:focus{
+    outline:none;
+}
+.register-btn{
+    margin:10px auto 10px auto;
+    width:150px;
+    height:40px;
+    border-radius: 20px;
+    
+    border:1px solid #5ee0aa;
+    color:black;
+    background-color: #5ee0aa;
+    transition: 1s;
+}
+.register-btn:hover{
+    border:1px solid #5ee0aa;
+    color:#5ee0aa;
+    background-color: transparent;
+}

@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+.profile-banner{
+    background-color:black;
+    height:60vh;
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.cover-photo{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    opacity:0.6;
+}
+
+.user-info{
+    /* background-color: red; */
+    position: absolute;
+    top:17vh;
+    left:3vw;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+}
+
+.profile-inner1{
+    /* background-color: yellow; */
+    width:200px;
+    height:200px;
+    margin-right: 10px;
+    /* border-radius: 50%; */
+}
+
+.profile-inner1 img{
+    width: 100%;
+    height:100%;
+    border-radius: 50%;
+    object-fit: cover;
+    /* border: 3px solid #5ee0aa; */
+    border: 2px solid white;
+}
+
+.profile-inner2{
+    /* background-color: green; */
+    /* padding-left:20px; */
+    color:white;
+    width: 600px;
+    height:80px;
+    overflow: hidden;
+    word-break:break-all;
+    white-space:normal;
+    
+}
+
+.profile-inner2 h1{
+
+    font-size:60px;
+}
+
+.profile-controls{
+    background-color:rgba(0, 0, 0, 0.753);
+    color:white;
+    position: absolute;
+    bottom:0;
+    right:0;
+    margin-right: 20px;
+    width:150px;
+    text-align: center;
+    height:30px;
+    border-radius:10px 10px 0px 0px;
+}
+
+.dropdown-controls {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width:150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+}
+
+.profile-controls:hover .dropdown-controls {
+    display: block;
+}
+
+.controls-link{
+    color:black;
+    display: block;
+    text-decoration: none;
+    margin:10px;
+}
+
+.posts_div{
+    /* background-color: red; */
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    margin:auto;
+    margin-top:20px;
+}
+
+@media only screen and (max-width: 900px){
+    .profile-banner{
+        height:50vh;
+        width: 100%;
+        margin: auto;
+        position: relative;
+    }
+    .user-info{
+        left:2vw;
+    }
+    .profile-inner1{
+        width:150px;
+        height:150px;
+        margin-right: 7px;
+    }
+    .profile-inner2{
+        width: 350px;
+        height:70px;
+    }
+    .profile-inner2 h1{
+        font-size:38px;
+    }   
+        
+}
+
+
+@media only screen and (max-width: 500px){
+
+    .user-info{
+        top:13vh;
+        left:2vw;
+    }
+    .profile-banner{
+        height:40vh;
+    }
+    .profile-inner1{
+        width:120px;
+        height:120px;
+        margin-right: 9px;
+    }
+    .profile-inner2{
+        width: 200px;
+        height:70px;
+    }
+    .profile-inner2 h1{
+        font-size:30px;
+    }   
+}

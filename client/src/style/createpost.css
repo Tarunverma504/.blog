@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+}
+
+
+.create-blog-outer{
+    width: 90%;
+    margin: auto;
+}
+.dummy_div{
+    width: 100%;
+    height:70px;
+    /* background-color: green; */
+}
+.image_div{
+    width:100%;
+    margin: auto;
+    height:60vh;
+    /* border: 2px solid grey; */
+    border-radius: 5px;
+    /* background-color: red; */
+}
+.image_div img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    opacity:1;
+    border-radius: 5px;
+}
+
+.image_category{
+    margin: auto;
+    width:99%;
+    display: flex;
+    justify-content: space-between;
+    padding-top:10px;
+}
+
+.image_category label{
+    font-size: 1.4em;
+    font-weight: bold;
+    color:#5c5c5c;
+    font-family: 'Lora', serif;
+}
+
+.select_category select{
+    font-size: 1.4em;
+    border-radius: 5%;
+    padding:0px 15px 0px 15px;
+}
+.up_img button, input{
+    margin-top: 10px;
+}
+
+.upload_btn{
+    padding:5px 15px;
+    border-radius: 5px;
+    background-color: #5ee0aa;
+    border: none;
+    transition: 1s;
+}
+.title{
+    width:100%;
+    border: none;
+    border-bottom: 2px solid #5c5c5cde;
+    padding-top:5px;
+    outline:none;
+    margin-top: 30px;
+    font-size: 3em;
+    text-align: center;
+    color:#5c5c5cf3;
+
+}
+
+.title::placeholder {
+    color:#5c5c5cde;
+    font-family: 'Lora', serif;
+}
+
+.blog::placeholder {
+    
+    color:#5c5c5cee;
+    font-family: 'Lora', serif;
+}
+
+.blog{
+    margin-top:30px;
+    width:100%;
+    font-size: 1.5em;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #5c5c5cde;
+    height:250px;
+    line-height:1.5;
+    color:#5c5c5cf3;
+
+}
+
+.publish_btn{
+    float: right;
+    font-size: 20px;
+    padding:8px 25px;
+    border-radius: 5px;
+    margin-bottom: 80px;
+    background-color: #5ee0aa;
+    border: none;
+    transition: 1s;
+}
+.publish_btn:hover{
+    background-color: black;
+    color: #5ee0aa;
+}
+@media only screen and (max-width: 700px){
+    .create-blog-outer{
+        width:98%;
+    }
+    .image_category{
+        flex-direction: column;
+        justify-content: space-between;
+        height: 200px;
+    }
+    .blog{
+        height:200px;
+        line-height:1;
+    }
+}
+

@@ -1,0 +1,106 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.banner{
+        background-image:linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3)),url('https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #000;
+        object-fit: cover;
+        width:100%;
+        height:65vh;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        object-fit:cover;
+}
+
+.banner h1{
+    font-size:6rem;
+    color:#FFFFFF;
+    text-decoration: underline;
+    text-decoration-color: #5ee0aa;
+}
+
+.home-outerdiv{
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+
+}
+.home-inner1{
+    /* background-color: green; */
+    width: 20%;
+    min-width:200px;
+}
+.home-inner2{
+    /* background-color:yellow; */
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+
+    
+    
+}
+.categories{
+    /* background-color:#ffc0cb; */
+    margin-top: 20px;
+    text-align: center;
+}
+
+.categories table{
+    border:1px solid rgb(204, 202, 202);
+    width:90%;
+    margin-top:20px;
+}
+.categories table td{
+    border:1px solid rgba(224,224,224,1);
+    padding:8px 0px;
+}
+
+.create-btn{
+    background-color: #6495ED;
+    text-decoration: none;
+    color:white;
+    padding:8px 40px;
+    border-radius: 5px;
+}
+
+.link-btn{
+    text-decoration: none;
+    color:black;
+}
+
+.create-btn:hover{
+    color:white;
+    background-color: #5580cf;
+}
+
+
+@media only screen and (max-width: 600px){
+    .home-outerdiv{
+        flex-direction: column;
+    }
+    .home-inner1{
+        width:100%;
+    }
+    .categories{
+        margin-top: 20px;
+        text-align: center;
+        width:80%;
+        margin:20px auto;
+    }
+    .categories table{
+        margin:20px auto;
+    }
+    .home-inner2{
+        width:100%;
+    }
+}
