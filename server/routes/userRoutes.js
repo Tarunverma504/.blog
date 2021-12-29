@@ -13,9 +13,9 @@ const API_KEY=process.env.API_KEY;
 sqMail.setApiKey(API_KEY);
 
 router.post("/verify",async(req,res)=>{
-    console.log(req.body);
+    // console.log(req.body);
     const result=await User.findById({_id:req.body.id});
-    console.log(result.otp);
+    // console.log(result.otp);
     if(result.otp == req.body.otp){
         res.status(200).send("verified");
     }
@@ -26,17 +26,14 @@ router.post("/verify",async(req,res)=>{
 })
 
 router.post('/login',async(req,res)=>{
-    console.log(req.body);
+    // console.log(req.body);
     
     const username=req.body.user;
     const password=req.body.password;
     const result=await User.find({username:username});
     console.log(result);
     if(result.length==1){
-        console.log("nd");
-        
         const isMatch= await bcrypt.compare(password,result[0].password);
-        console.log(isMatch);
             if(isMatch==false){
                 res.status(403).send({ message: 'Invalid username or password'});
             }
@@ -84,8 +81,6 @@ router.post('/signup',async(req,res)=>{
 
 router.post('/forgot',async(req,res)=>{
     const email=req.body.email;
-    //console.log(email);
-    //res.status(200).send(email);
     const result = await User.find({email:email});
     if(result.length==1){
         let msg=`<div style="margin:auto;width:350px;text-align:center;padding:5px 0px">
@@ -103,7 +98,7 @@ router.post('/forgot',async(req,res)=>{
 })
 
 router.post('/reset',async(req,res)=>{
-    console.log(req.body);
+    //console.log(req.body);
     let password=req.body.pass;
     password=await bcrypt.hash(password,10);
     let id=req.body.id;
@@ -114,14 +109,12 @@ router.post('/reset',async(req,res)=>{
 router.get('/admin/:id',async(req,res)=>{
     const id = req.params.id;
    const data =  await User.findById({_id:id}).populate("posts");
-    console.log(data);
     res.status(200).send(data);
 })
 
 router.get('/user/:id',async(req,res)=>{
     const id = req.params.id;
    const data =  await User.findById({_id:id}).populate("posts");
-    console.log(data);
     res.status(200).send(data);
 })
 

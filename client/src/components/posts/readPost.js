@@ -39,7 +39,7 @@ function Readpost(props){
                 </div>
                 {props.userid!=props.Admin_id?"":<>
                     <div className="blog_controls">
-                        <i className="fas fa-edit"></i>
+                        <Link to={`/edit/${props.blog_id}`}> <i className="fas fa-edit"></i></Link>
                         <i className="fas fa-trash-alt" onClick={deletPost}></i>
                     </div>
                     </>}

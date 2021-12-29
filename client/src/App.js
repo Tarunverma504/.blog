@@ -14,15 +14,15 @@ import Coverphoto from './components/profile/coverphoto';
 import Loader from './components/loader';
 import Createpost from './components/posts/createpost';
 import Viewpost from './components/posts/viewPost';
-import Errorpage from './components/error';
 import Filter from './components/posts/filter';
-// import User from '../../server/model/user';
+import Editpost from './components/posts/editPost';
 function App() {
   return (
     <BrowserRouter>
           <Switch>
             <Route exact path='/' component={Home}/>
             <Route exact path='/category/:option' component={Filter}/>
+            <Route exact path='/edit/:id' component={Editpost}/>
             <Route exact path='/Author/:id' component={Userprofile}/>
             <Route exact path='/create/post' component={Createpost}/>
             <Route exact path='/view/blog/:id' component={Viewpost}/>

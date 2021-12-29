@@ -33,9 +33,7 @@ const storage = multer.diskStorage({
         const file = req.file;
         const fileName = file.filename;
         const userid = req.params.id;
-        // const basePath = `${req.protocol}://${req.get("host")}/public/uploads/`;
         const basePath = `${req.protocol}://${req.get("host")}/public/blog_photos/${fileName}`;
-        console.log(basePath+fileName);
         res.status(200).send(basePath);
       }
       catch{
@@ -45,7 +43,7 @@ const storage = multer.diskStorage({
 
 
   router.post('/post/blog', async(req, res, next)=>{
-      console.log(req.body);
+      // console.log(req.body);
       const username = req.body.user;
       const image = req.body.image;
       const title = req.body.title;

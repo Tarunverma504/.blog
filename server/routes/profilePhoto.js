@@ -4,27 +4,6 @@ const User=require("../model/user");
 const fileUpload = require('express-fileupload');
 const multer = require("multer");
 
-
-// var storage = multer.diskStorage({
-//     destination: function (req, file, cb) {
-//       cb(null, './public/uploads')
-//     },
-//     filename: function (req, file, cb) {
-//         console.log(file.originalname); 
-//       cb(null, file.originalname)
-//     }
-// })
-// var upload = multer({ storage: storage })
-
-
-
-// router.post("/profilephoto",upload.single('profile-file'),async(req,res,next)=>{
-
-//     console.log(JSON.stringify(req.file))
-//     res.send("vmdfvf");
-// })
-
-
 const FILE_TYPE_MAP = {
   "image/png": "png",
   "image/jpeg": "jpeg",
@@ -57,11 +36,7 @@ router.post('/profilephoto/:id', upload.single('profile'), async(req, res, next)
     const file = req.file;
     const fileName = file.filename;
     const userid = req.params.id;
-    // const basePath = `${req.protocol}://${req.get("host")}/public/uploads/`;
     const basePath = `${req.protocol}://${req.get("host")}/public/profile_photos/${fileName}`;
-    // var response = '<a href="/">Home</a><br>'
-    // response += "Files uploaded successfully.<br>"
-    // response += `<img src="${req.file.path}" /><br>`
     const up = await User.findByIdAndUpdate({_id:userid},{profile_photo:basePath},{new: true});
     res.status(200).send(up);
   }
