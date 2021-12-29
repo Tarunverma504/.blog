@@ -6,7 +6,9 @@ const { findById } = require('../model/user');
 const bcrypt=require("bcryptjs");
 const sqMail = require("@sendgrid/mail");
 
-const API_KEY="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";
+require('dotenv').config();
+const API_KEY=process.env.API_KEY;
+// const API_KEY="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";
 
 
 sqMail.setApiKey(API_KEY);
