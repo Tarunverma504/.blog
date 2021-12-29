@@ -21,7 +21,7 @@ function Forget({history}){
             'Content-Type': 'application/json',
           }
         }
-        if(email.length.trim().length<1){
+        if(email.trim().length<1){
           setLoading(false);
           return;
         }
