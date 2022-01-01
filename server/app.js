@@ -27,6 +27,9 @@ mongoose.connect(`${process.env.database_url}`)
     app.use(express.urlencoded({ extended: true }));
     
 
+    app.use(fileUpload({
+        useTempFiles: true
+    }));
     app.use(userRoutes);
     app.use(profilePhoto);
     app.use(coverPhoto);

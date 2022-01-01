@@ -1,12 +1,12 @@
 import React ,{useState,useEffect} from "react";
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { Link, useParams } from 'react-router-dom';
+// import { Link, useParams } from 'react-router-dom';
 import axios from "axios";
 import "../../style/Forgetform.css";
 import Loader from "../loader";
-const Serverport="http://localhost:8000";
+const Serverport="https://dot-blog.herokuapp.com";
 function Forget({history}){
-    const [otp,setOtp]=useState("");
+    // const [otp,setOtp]=useState("");
     const [email,setEmail]=useState("");
     const [errmsg,setErrmsg]=useState("");
     const [loading, setLoading]=useState(false);

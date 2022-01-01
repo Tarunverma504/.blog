@@ -1,11 +1,11 @@
 import Navbar from "../Home/navbar";
 import React ,{useState,useEffect} from "react";
-import { Link, useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 import axios from 'axios';
 import Loader from "../loader";
 import "../../style/createpost.css";
 
-const Serverport="http://localhost:8000";
+const Serverport="https://dot-blog.herokuapp.com";
 
 function Editpost({history}){
 
@@ -59,7 +59,7 @@ function Editpost({history}){
             const res=await axios.post(`${Serverport}/photo/blog`,fd,config);
             await setUrl(res.data);
             setFilename('');
-            console.log(imgUrl);
+            // console.log(imgUrl);
             setLoading(false);
             
         }
@@ -120,7 +120,6 @@ function Editpost({history}){
     function alerting(msg){
         alert(msg);
     }
-    console.log(data);
     return(<>
             <Navbar/>
             {loading?<Loader/>:""}

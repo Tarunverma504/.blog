@@ -3,38 +3,21 @@ const router= express.Router();
 const multer = require("multer");
 const Blogs = require("../model/blogs");
 const User = require("../model/user");
-const FILE_TYPE_MAP = {
-    "image/png": "png",
-    "image/jpeg": "jpeg",
-    "image/jpg": "jpg",
-};
-
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      const isValid = FILE_TYPE_MAP[file.mimetype];
-      let uploadError = new Error("invalid image type");
-  
-      if (isValid) {
-        uploadError = null;
-      }
-      cb(uploadError, "public/blog_photos");
-    },
-    filename: function (req, file, cb) {
-      const fileName = file.originalname.split(" ").join("-");
-      const extension = FILE_TYPE_MAP[file.mimetype];
-      cb(null, `${fileName}-${Date.now()}.${extension}`);
-    },
-  });
-  
-  const upload = multer({ storage: storage });
-
-  router.post('/photo/blog', upload.single('blog_img'), async(req, res, next)=>{
+const cloudinary = require('cloudinary').v2;
+cloudinary.config({
+  cloud_name:process.env.cloud_name,
+  api_key: process.env.cloud_api_key,
+  api_secret:process.env.api_secret,
+})
+  router.post('/photo/blog', async(req, res, next)=>{
       try{
-        const file = req.file;
+        const file = req.files.blog_img;
         const fileName = file.filename;
-        const userid = req.params.id;
-        const basePath = `${req.protocol}://${req.get("host")}/public/blog_photos/${fileName}`;
-        res.status(200).send(basePath);
+        await cloudinary.uploader.upload(file.tempFilePath, async function(err, result){
+          console.log("Error: ",err);
+          const url = result.url;
+          res.status(200).send(url);
+        });
       }
       catch{
         res.status(500).send({ message: "Something Went Wrong"});

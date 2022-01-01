@@ -1,8 +1,7 @@
 // import image1 from "../assests/user.png";
-import { Link, useParams } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import "../../style/Usercontrol.css";
 function Usercontrols(props){
-    console.log(props.username);
     const deleteUser=()=>{
         sessionStorage.removeItem("UserData");
     }

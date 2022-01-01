@@ -86,7 +86,7 @@ router.post('/forgot',async(req,res)=>{
         let msg=`<div style="margin:auto;width:350px;text-align:center;padding:5px 0px">
                     <h1> Hello,${result[0].username}</h1>		
                     <p>A request has been received to change the password for your .blog account.</p>
-                    <a href="http://localhost:3000/${result[0]._id}/reset" style="background-color:#219ebc;padding:8px;color:white;text-decoration:none;"> Reset Password</a>
+                    <a href="${process.env.clientside_url}/${result[0]._id}/reset" style="background-color:#219ebc;padding:8px;color:white;text-decoration:none;"> Reset Password</a>
                 </div>`;
         sendLINK(email,msg);
         res.status(200).send("Success");

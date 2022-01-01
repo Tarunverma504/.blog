@@ -11,7 +11,6 @@ import Userprofile from './components/profile/userprofile';
 import Adminprofile from './components/profile/AdminProfile';
 import Profilephoto from './components/profile/profilephoto';
 import Coverphoto from './components/profile/coverphoto';
-import Loader from './components/loader';
 import Createpost from './components/posts/createpost';
 import Viewpost from './components/posts/viewPost';
 import Filter from './components/posts/filter';

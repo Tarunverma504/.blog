@@ -1,10 +1,10 @@
 
 import "../../style/photo-upload.css";
 import React ,{useState,useEffect} from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import axios from 'axios';
 import Loader from "../loader";
-const Serverport="http://localhost:8000";
+const Serverport="https://dot-blog.herokuapp.com";
 function Profilephoto({history}){
     
     const [profile,setProfile]=useState({});
@@ -25,7 +25,7 @@ function Profilephoto({history}){
     const handleSubmit = async(e) => {
         setLoading(true);
         e.preventDefault();
-        console.log(profile);
+        // console.log(profile);
         const fd = new FormData();
         fd.append("name",filename);
         fd.append("profile",profile);
@@ -35,7 +35,7 @@ function Profilephoto({history}){
             }
           }
           try{
-            console.log(fd);
+            // console.log(fd);
             const res=await axios.post(`${Serverport}/profilephoto/${userid}`,fd,config);
             // setErrmsg("");
             const dummy={
@@ -45,12 +45,12 @@ function Profilephoto({history}){
                 "cover__photo":res.data.cover_photo,
               }
             await sessionStorage.setItem("UserData",JSON.stringify(dummy));
-            console.log(res.data.profile_photo);
+            // console.log(res.data.profile_photo);
             
             alert("Profile Updated :)");
             setLoading(false);
             history.push('/');
-            console.log(res);
+            // console.log(res);
           }
           
           catch(err){

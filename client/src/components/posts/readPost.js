@@ -6,10 +6,10 @@ import { Link, useParams } from 'react-router-dom';
 import { useHistory } from "react-router";
 
 import "../../style/readPost.css";
-import Errorpage from "../error";
+// import Errorpage from "../error";
 import { confirm } from "react-confirm-box";
 
-const Serverport="http://localhost:8000";
+const Serverport="https://dot-blog.herokuapp.com";
 
 
 function Readpost(props){

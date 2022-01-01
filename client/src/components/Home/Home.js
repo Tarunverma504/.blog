@@ -6,7 +6,7 @@ import Loader from "../loader";
 import "../../style/Home.css";
 import { Link } from "react-router-dom";
 import Posts from "../posts/posts";
-const Serverport="http://localhost:8000";
+const Serverport="https://dot-blog.herokuapp.com";
 
 function Home() {
 
@@ -25,10 +25,9 @@ function Home() {
         setLoading(false);
 
     },[])
-    console.log(data);
 
    const handleCategory= async()=>{
-      console.log("nbvbbnnb");
+      // console.log("nbvbbnnb");
    }
 
   return (

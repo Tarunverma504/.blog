@@ -5,7 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import Loader from "../loader";
-const Serverport="http://localhost:8000";
+const Serverport="https://dot-blog.herokuapp.com";
 function Login({history}) {
    
     const [username,setUsername]=useState("");
@@ -18,7 +18,7 @@ function Login({history}) {
           user:username,
           password:pass
         }
-        console.log(obj);
+        // console.log(obj);
         const config={
           headers: {
             'Content-Type': 'application/json',
@@ -46,9 +46,9 @@ function Login({history}) {
           console.log("empty");
         }
         else{
-          console.log("data");
+          // console.log("data");
           const user=JSON.parse(r);
-          console.log(user.username);
+          // console.log(user.username);
         
         }
           history.push(`/`);

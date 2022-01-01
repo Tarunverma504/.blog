@@ -7,7 +7,7 @@ import "../../style/Home.css";
 import { Link, useParams } from 'react-router-dom';
 
 import Posts from "../posts/posts";
-const Serverport="http://localhost:8000";
+const Serverport="https://dot-blog.herokuapp.com";
 
 function useForceUpdate(){
     const [value, setValue] = useState(0); // integer state
@@ -31,10 +31,9 @@ function Filter() {
         setLoading(false);
 
     },[params.option])
-    console.log(data);
 
    const handleCategory= async()=>{
-      console.log("nbvbbnnb");
+      // console.log("nbvbbnnb");
    }
 
   return (

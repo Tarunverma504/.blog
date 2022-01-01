@@ -1,14 +1,12 @@
 import Navbar from "../Home/navbar";
 import "../../style/userProfile.css";
-import image1 from "../../assests/lukas-blazek-GnvurwJsKaY-unsplash.jpg";
-import image2 from "../../assests/thought-catalog-505eectW54k-unsplash.jpg";
 import Loader from "../loader";
 import React ,{useState,useEffect} from "react";
 import axios from 'axios';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Posts from "../posts/posts";
 import "../../style/posts.css";
-const Serverport="http://localhost:8000";
+const Serverport="https://dot-blog.herokuapp.com";
 
 function Userprofile({history}){
     const [loading, setLoading]=useState(false);

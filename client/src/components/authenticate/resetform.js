@@ -1,10 +1,10 @@
 import React ,{useState,useEffect} from "react";
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { Link, useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 import axios from "axios";
 import "../../style/Forgetform.css";
 import Loader from "../loader";
-const Serverport="http://localhost:8000";
+const Serverport="https://dot-blog.herokuapp.com";
 function Resetform({history}){
     const [pass,setPass]=useState("");
     const [cpass,setCpass]=useState("");

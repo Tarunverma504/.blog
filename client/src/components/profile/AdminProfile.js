@@ -8,7 +8,7 @@ import Posts from "../posts/posts";
 import "../../style/posts.css";
 
 
-const Serverport="http://localhost:8000";
+const Serverport="https://dot-blog.herokuapp.com";
 
 
 function Adminprofile({history}){
@@ -25,7 +25,7 @@ function Adminprofile({history}){
           history.push("/login");
         }
         else{
-          console.log("data");
+          // console.log("data");
           const temp=JSON.parse(r);
         //   console.log(user.username);
           const dummy={
@@ -49,7 +49,7 @@ function Adminprofile({history}){
           }))
         }
       },[])
-      console.log(data.posts);
+      // console.log(data.posts);
     return(
         <>
           {loading?<Loader/>:<>

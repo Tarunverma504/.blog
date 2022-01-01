@@ -1,6 +1,5 @@
 
 import "../../style/posts.css";
-import image1 from "../../assests/thought-catalog-505eectW54k-unsplash.jpg";
 import { Link } from "react-router-dom";
 
 function Posts(props){

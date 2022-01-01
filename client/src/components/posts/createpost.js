@@ -3,9 +3,9 @@ import Navbar from "../Home/navbar";
 import React ,{useState,useEffect} from "react";
 import axios from 'axios';
 import Loader from "../loader";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "../../style/createpost.css";
-const Serverport="http://localhost:8000";
+const Serverport="https://dot-blog.herokuapp.com";
 
 function Createpost({history}){
     const [category,setCategory]=useState('');
@@ -26,7 +26,6 @@ function Createpost({history}){
             history.push("/login");
         }
         else{
-            console.log("data");
             const temp=JSON.parse(r);
           //   console.log(user.username);
             setUserid(temp.user_id);
@@ -66,7 +65,6 @@ function Createpost({history}){
             const res=await axios.post(`${Serverport}/photo/blog`,fd,config);
             await setUrl(res.data);
             setFilename('');
-            console.log(imgUrl);
             setLoading(false);
             
         }

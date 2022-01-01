@@ -3,10 +3,10 @@ import Navbar from "../Home/navbar";
 import React ,{useState,useEffect} from "react";
 import axios from 'axios';
 import Loader from "../loader";
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Errorpage from "../error";
 import Readpost from "./readPost";
-const Serverport="http://localhost:8000";
+const Serverport="https://dot-blog.herokuapp.com";
 function Viewpost({history}){
     const params = useParams();
     const [loading, setLoading]=useState(false);
@@ -34,15 +34,15 @@ function Viewpost({history}){
           setAdmin_id("");
         }
         else{
-          console.log("data");
+          // console.log("data");
           const temp=JSON.parse(r);
-          console.log(temp.user_id);
+          // console.log(temp.user_id);
           setAdmin_id(temp.user_id);
         }
         
        
     },[])
-    console.log(data);
+    // console.log(data);
     return(
         <>
             <Navbar/>
