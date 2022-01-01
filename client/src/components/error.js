@@ -1,13 +1,10 @@
 
-import Navbar from "./Home/navbar";
-import React ,{useState,useEffect} from "react";
-// import axios from 'axios';
-// import Loader from "./loader";
-import { Link, useParams } from 'react-router-dom';
+import React  from "react";
+import { Link} from 'react-router-dom';
 import "../style/createpost.css";
 import "../style/error.css";
 
-const Serverport="https://dot-blog.herokuapp.com";
+// const Serverport="https://dot-blog.herokuapp.com";
 function Errorpage({history}){
     return(
         <>

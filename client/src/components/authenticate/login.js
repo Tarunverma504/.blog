@@ -1,7 +1,6 @@
 import React ,{useState,useEffect} from "react";
 import '../../style/register.css';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import Loader from "../loader";
@@ -28,7 +27,7 @@ function Login({history}) {
         try{
           const res=await axios.post(`${Serverport}/login`,obj,config);
           setLoading(false);
-          if(res.status!=200){
+          if(res.status!==200){
             throw Error(res);
           }
           
@@ -47,7 +46,7 @@ function Login({history}) {
         }
         else{
           // console.log("data");
-          const user=JSON.parse(r);
+         // const user=JSON.parse(r);
           // console.log(user.username);
         
         }

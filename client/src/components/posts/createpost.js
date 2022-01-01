@@ -114,7 +114,7 @@ function Createpost({history}){
             }
         }
         try{
-            const res=await axios.post(`${Serverport}/post/blog`,obj,config);
+            await axios.post(`${Serverport}/post/blog`,obj,config);
             alerting("Blog Uploaded Successfully :)");
             setLoading(false);
             history.push("/");
@@ -138,7 +138,7 @@ function Createpost({history}){
             <div className="create-blog-outer">
                 <div className="dummy_div"></div>
                 <div className="image_div">
-                    {imgUrl.length>0?<img className="blog-image" src={imgUrl}/> :<img  className="blog-image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQacFQdbOawHrPLccZTIPijoRJ7oFoaW7V9ckq7-KDlmSuhLwER"/>}
+                    {imgUrl.length>0?<img className="blog-image" src={imgUrl} alt="image not found" /> :<img  className="blog-image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQacFQdbOawHrPLccZTIPijoRJ7oFoaW7V9ckq7-KDlmSuhLwER" alt='image not found' />}
                 </div>
                 <div className="image_category">
                     <div className="up_img">

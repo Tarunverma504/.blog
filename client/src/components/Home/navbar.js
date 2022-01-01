@@ -1,7 +1,6 @@
 import React ,{useState,useEffect} from "react";
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { Link, useParams } from 'react-router-dom';
-// import axios from "axios";
+import { Link} from 'react-router-dom';
 import "../../style/navbar.css";
 
 import Usercontrols from "./Usercontrol";

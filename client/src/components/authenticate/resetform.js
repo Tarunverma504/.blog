@@ -1,4 +1,4 @@
-import React ,{useState,useEffect} from "react";
+import React ,{useState} from "react";
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {  useParams } from 'react-router-dom';
 import axios from "axios";
@@ -13,7 +13,7 @@ function Resetform({history}){
     const params = useParams();
     const submit=async ()=>{
       setLoading(true);
-        if(pass==cpass){
+        if(pass===cpass){
             var obj={
                 pass:pass,
                 cpass:cpass,
@@ -29,7 +29,7 @@ function Resetform({history}){
               return;
             }
             try{
-              const res=await axios.post(`${Serverport}/reset`,obj,config);
+              await axios.post(`${Serverport}/reset`,obj,config);
               setLoading(false);
               alerting("Password Updated.")
             }

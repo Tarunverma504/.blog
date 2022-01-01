@@ -1,7 +1,6 @@
-import Navbar from "../Home/navbar";
-import React ,{useState,useEffect} from "react";
+import React  from "react";
 import axios from 'axios';
-import Loader from "../loader";
+// import Loader from "../loader";
 import { Link, useParams } from 'react-router-dom';
 import { useHistory } from "react-router";
 

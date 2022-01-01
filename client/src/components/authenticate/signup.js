@@ -1,4 +1,4 @@
-import React ,{useState,useEffect} from "react";
+import React ,{useState} from "react";
 import '../../style/register.css';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';

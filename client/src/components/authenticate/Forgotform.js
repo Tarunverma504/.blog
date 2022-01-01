@@ -1,12 +1,10 @@
-import React ,{useState,useEffect} from "react";
+import React ,{useState} from "react";
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-// import { Link, useParams } from 'react-router-dom';
 import axios from "axios";
 import "../../style/Forgetform.css";
 import Loader from "../loader";
 const Serverport="https://dot-blog.herokuapp.com";
 function Forget({history}){
-    // const [otp,setOtp]=useState("");
     const [email,setEmail]=useState("");
     const [errmsg,setErrmsg]=useState("");
     const [loading, setLoading]=useState(false);
@@ -26,7 +24,7 @@ function Forget({history}){
           return;
         }
         try{
-          const res=await axios.post(`${Serverport}/forgot`,obj,config);
+          await axios.post(`${Serverport}/forgot`,obj,config);
           setLoading(false);
           history.push('/login');
         }
@@ -36,11 +34,6 @@ function Forget({history}){
             console.log(err.response.data.message);
         console.log(err);
         }
-      }
-      function alerting(msg){
-        setLoading(false);
-        alert(msg);
-        history.push('/signup');
       }
 
     return (

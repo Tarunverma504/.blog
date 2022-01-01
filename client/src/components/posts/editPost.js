@@ -11,7 +11,7 @@ function Editpost({history}){
 
     const params = useParams();
     const [loading, setLoading]=useState(false);
-    const [data,setData]=useState([]);
+    // const [data,setData]=useState([]);
     const [imgUrl, setUrl]=useState('');
     const [filename,setFilename]=useState('');
     const [img, setImg]=useState('');
@@ -126,7 +126,7 @@ function Editpost({history}){
             <div className="create-blog-outer">
                 <div className="dummy_div"></div>
                 <div className="image_div">
-                    {imgUrl.length>0?<img className="blog-image" src={imgUrl}/> :<img  className="blog-image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQacFQdbOawHrPLccZTIPijoRJ7oFoaW7V9ckq7-KDlmSuhLwER"/>}
+                    {imgUrl.length>0?<img className="blog-image" src={imgUrl} alt="image not fount" /> :<img  className="blog-image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQacFQdbOawHrPLccZTIPijoRJ7oFoaW7V9ckq7-KDlmSuhLwER" alt="image not fount"  />}
                 </div>
                 <div className="image_category">
                     <div className="up_img">

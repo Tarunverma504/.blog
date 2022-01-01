@@ -1,4 +1,4 @@
-import React ,{useState,useEffect} from "react";
+import React ,{useState} from "react";
 import '../../style/otp.css';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { useParams } from 'react-router-dom';
@@ -25,7 +25,7 @@ function Otp({history}) {
           return;
         }
         try{
-          const res=await axios.post(`${Serverport}/verify`,obj,config);
+          await axios.post(`${Serverport}/verify`,obj,config);
           setLoading(false);
           history.push('/login');
         }

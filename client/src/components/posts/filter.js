@@ -8,11 +8,6 @@ import { Link, useParams } from 'react-router-dom';
 
 import Posts from "../posts/posts";
 const Serverport="https://dot-blog.herokuapp.com";
-
-function useForceUpdate(){
-    const [value, setValue] = useState(0); // integer state
-    return () => setValue(value => value + 1); // update the state to force render
-}
 function Filter() {
 
     const params = useParams();

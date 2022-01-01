@@ -1,4 +1,3 @@
-// import image1 from "../assests/user.png";
 import { Link} from 'react-router-dom';
 import "../../style/Usercontrol.css";
 function Usercontrols(props){
@@ -10,7 +9,7 @@ function Usercontrols(props){
             <div className="dropdown">
                 <div className="user">
                     <div className="dp">
-                        <img src={props.image}/> 
+                        <img src={props.image} allt="image not found"/> 
                     </div>
                     <div className="username"> 
                         {props.username}
