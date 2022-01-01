@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.43272827.chunk.css",
+    "main.js": "/static/js/main.f6082019.chunk.js",
+    "main.js.map": "/static/js/main.f6082019.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.71c5bbf3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.71c5bbf3.js.map",
+    "static/css/2.383c0125.chunk.css": "/static/css/2.383c0125.chunk.css",
+    "static/js/2.c7fb2b41.chunk.js": "/static/js/2.c7fb2b41.chunk.js",
+    "static/js/2.c7fb2b41.chunk.js.map": "/static/js/2.c7fb2b41.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.383c0125.chunk.css.map": "/static/css/2.383c0125.chunk.css.map",
+    "static/css/main.43272827.chunk.css.map": "/static/css/main.43272827.chunk.css.map",
+    "static/js/2.c7fb2b41.chunk.js.LICENSE.txt": "/static/js/2.c7fb2b41.chunk.js.LICENSE.txt",
+    "static/media/Forgetform.css": "/static/media/thought-catalog-505eectW54k-unsplash.d2e27a47.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.71c5bbf3.js",
+    "static/css/2.383c0125.chunk.css",
+    "static/js/2.c7fb2b41.chunk.js",
+    "static/css/main.43272827.chunk.css",
+    "static/js/main.f6082019.chunk.js"
+  ]
+}
