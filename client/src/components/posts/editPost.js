@@ -11,7 +11,6 @@ function Editpost({history}){
 
     const params = useParams();
     const [loading, setLoading]=useState(false);
-    // const [data,setData]=useState([]);
     const [imgUrl, setUrl]=useState('');
     const [filename,setFilename]=useState('');
     const [img, setImg]=useState('');
@@ -24,7 +23,6 @@ function Editpost({history}){
         setLoading(true);
        await axios.get(`${Serverport}/view/blog/${params.id}`)
         .then(res => {
-          setData(res.data);
           setUrl(res.data.image);
           setCategory(res.data.category);
           setTitle(res.data.title);
