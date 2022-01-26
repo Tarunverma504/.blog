@@ -25,6 +25,10 @@ const blogSchema=new mongoose.Schema({
         type:String,
         trim:true,
     },
+    comment:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Comments"
+    }],
     Date:{
         type:String,
         require:true,

@@ -5,8 +5,8 @@ import axios from 'axios';
 import Loader from "../loader";
 // import { Link } from "react-router-dom";
 import "../../style/createpost.css";
-const Serverport="https://dot-blog.herokuapp.com";
-
+import {Serverport} from "../../server_url";
+// const Serverport="https://dot-blog.herokuapp.com";
 function Createpost({history}){
     const [category,setCategory]=useState('');
     const [img, setImg]=useState('');
@@ -30,13 +30,6 @@ function Createpost({history}){
           //   console.log(user.username);
             setUserid(temp.user_id);
             setUer(temp.username);
-            // const dummy={
-            //   "user_id":temp.user_id,
-            //   "username":temp.username,
-            //   "profile__photo":temp.profile__photo,
-            //   "cover__photo":temp.cover__photo,
-            // }
-            // setAdmin(dummy);
           
           }
     },[])

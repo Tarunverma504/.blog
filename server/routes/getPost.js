@@ -11,8 +11,9 @@ const User = require("../model/user");
   router.get("/view/blog/:id",async(req,res)=>{
     try{
       const blog_id=req.params.id;
-      const getBlog = await Blogs.findById({_id:blog_id});
-      res.status(200).send(getBlog);
+      const getBlog = await Blogs.findById({_id:blog_id}).populate("comment");
+      res.send(getBlog);
+    //  res.status(200).send(getBlog);
     }
     catch{
         res.status(500).send();

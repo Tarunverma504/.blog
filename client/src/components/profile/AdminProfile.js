@@ -6,10 +6,9 @@ import { Link, useParams } from 'react-router-dom';
 import Loader from "../loader";
 import Posts from "../posts/posts";
 import "../../style/posts.css";
+import {Serverport} from "../../server_url";
 
-
-const Serverport="https://dot-blog.herokuapp.com";
-
+// const Serverport="https://dot-blog.herokuapp.com";
 
 function Adminprofile({history}){
     const [Admin,setAdmin]=useState({});

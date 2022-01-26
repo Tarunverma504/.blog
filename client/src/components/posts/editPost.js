@@ -4,9 +4,8 @@ import {  useParams } from 'react-router-dom';
 import axios from 'axios';
 import Loader from "../loader";
 import "../../style/createpost.css";
-
-const Serverport="https://dot-blog.herokuapp.com";
-
+import {Serverport} from "../../server_url";
+// const Serverport="https://dot-blog.herokuapp.com";
 function Editpost({history}){
 
     const params = useParams();

@@ -5,6 +5,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 var cors = require('cors');
 const userRoutes=require('./routes/userRoutes');
+const commentRoutes = require('./routes/commentRoutes');
 const profilePhoto = require('./routes/profilePhoto');
 const coverPhoto = require('./routes/coverPhoto');
 const createPost = require('./routes/createPost');
@@ -12,7 +13,8 @@ const getPost = require('./routes/getPost');
 const multer = require("multer");
 const bcrypt=require("bcryptjs");
 const fileUpload = require('express-fileupload');
-mongoose.connect(`${process.env.database_url}`)
+//${process.env.database_url}
+mongoose.connect(`mongodb://localhost:27017/blog-db`)
     .then(() => console.log('DB Connected'))
     .catch((err) => console.log(err));
 
@@ -35,6 +37,7 @@ mongoose.connect(`${process.env.database_url}`)
     app.use(coverPhoto);
     app.use(createPost);
     app.use(getPost);
+    app.use(commentRoutes);
     app.listen(process.env.PORT ||8000, (req, res) => {
         console.log('server running at port 8000');
 });

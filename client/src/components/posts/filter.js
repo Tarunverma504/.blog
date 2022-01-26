@@ -7,7 +7,8 @@ import "../../style/Home.css";
 import { Link, useParams } from 'react-router-dom';
 
 import Posts from "../posts/posts";
-const Serverport="https://dot-blog.herokuapp.com";
+import {Serverport} from "../../server_url";
+// const Serverport="https://dot-blog.herokuapp.com";
 function Filter() {
 
     const params = useParams();

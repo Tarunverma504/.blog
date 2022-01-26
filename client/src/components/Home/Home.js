@@ -6,8 +6,9 @@ import Loader from "../loader";
 import "../../style/Home.css";
 import { Link } from "react-router-dom";
 import Posts from "../posts/posts";
-const Serverport="https://dot-blog.herokuapp.com";
-
+import {Serverport} from "../../server_url";
+// const Serverport="https://dot-blog.herokuapp.com";
+// const Serverport="http://localhost:8000";
 function Home() {
 
    const [data,setData]=useState([]);
@@ -65,14 +66,6 @@ function Home() {
                            }
                      </>
             }
-               {/* <Posts/>
-               <Posts/>
-               <Posts/>
-               <Posts/>
-               <Posts/>
-               <Posts/>
-               <Posts/>
-               <Posts/> */}
             </div>
         </div>
      </>

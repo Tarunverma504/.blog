@@ -6,8 +6,8 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Posts from "../posts/posts";
 import "../../style/posts.css";
-const Serverport="https://dot-blog.herokuapp.com";
-
+import {Serverport} from "../../server_url";
+// const Serverport="https://dot-blog.herokuapp.com";
 function Userprofile({history}){
     const [loading, setLoading]=useState(false);
     const params = useParams();

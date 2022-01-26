@@ -1,0 +1,1 @@
+export const Serverport="https://dot-blog.herokuapp.com";

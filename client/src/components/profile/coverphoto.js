@@ -3,7 +3,8 @@ import React ,{useState,useEffect} from "react";
 // import { Link } from "react-router-dom";
 import axios from 'axios';
 import Loader from "../loader";
-const Serverport="https://dot-blog.herokuapp.com";
+import {Serverport} from "../../server_url";
+// const Serverport="https://dot-blog.herokuapp.com";
 function Coverphoto({history}){
     const [profile,setProfile]=useState({});
     const [filename,setFilename]=useState('');

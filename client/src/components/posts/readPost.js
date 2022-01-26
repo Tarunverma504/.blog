@@ -5,11 +5,9 @@ import { Link, useParams } from 'react-router-dom';
 import { useHistory } from "react-router";
 
 import "../../style/readPost.css";
-// import Errorpage from "../error";
 import { confirm } from "react-confirm-box";
-
-const Serverport="https://dot-blog.herokuapp.com";
-
+import {Serverport} from "../../server_url";
+// const Serverport="https://dot-blog.herokuapp.com";
 
 function Readpost(props){
     const params = useParams();
@@ -49,7 +47,7 @@ function Readpost(props){
                         <h5>Category: {props.category}</h5>
                     </div>
                     <div className="about_blog_2">
-                        <h5>Date: 8 Jan 2020</h5>
+                        <h5>{props.date}</h5>
                     </div>
                 </div>
                 <div className="whole_blog">

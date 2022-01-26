@@ -33,6 +33,7 @@ cloudinary.config({
       const category = req.body.category;
       const body = req.body.blog;
       const userid = req.body.userid;
+      let date=await getDate();
       const d= await Blogs.create({
         username:username,
         image: image,
@@ -40,12 +41,23 @@ cloudinary.config({
         body: body,
         category: category,
         userid:userid,
+        Date:date
       });
       
       var addid=await User.findByIdAndUpdate({_id:userid},{$push:{posts:d._id}});
 
       res.status(200).send(addid);
   })
+
+
+function getDate(){
+    let dt=new Date();
+    let date=("0"+dt.getDate()).slice(-2);
+    let month=("0"+(dt.getMonth()+1)).slice(-2);
+    let year=dt.getFullYear();
+    let d=date+"-"+month+"-"+year;
+    return d;
+}
 
 module.exports = router;
   
