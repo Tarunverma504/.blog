@@ -14,7 +14,7 @@ const multer = require("multer");
 const bcrypt=require("bcryptjs");
 const fileUpload = require('express-fileupload');
 //${process.env.database_url}
-mongoose.connect(`mongodb://localhost:27017/blog-db`)
+mongoose.connect(`${process.env.database_url}`)
     .then(() => console.log('DB Connected'))
     .catch((err) => console.log(err));
 

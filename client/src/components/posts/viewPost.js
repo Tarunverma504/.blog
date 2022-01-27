@@ -8,7 +8,6 @@ import Errorpage from "../error";
 import Readpost from "./readPost";
 import Comment from "./comment";
 import {Serverport} from "../../server_url";
-// const Serverport="https://dot-blog.herokuapp.com";
 function Viewpost({history}){
     const params = useParams();
     const [loading, setLoading]=useState(false);
@@ -42,7 +41,6 @@ function Viewpost({history}){
         }
         else{
           const temp=JSON.parse(r);
-          console.log(temp);
           setAdmin_id(temp.user_id);
           setAdmin_photo(temp.profile__photo);
           setAdmin_name(temp.username);
@@ -77,6 +75,7 @@ function Viewpost({history}){
           .then(res => {
             setData(res.data);
             setComments(res.data.comment);
+            setPostcomment('');
             setLoading(false);
           })
           .catch((err=>{
@@ -90,7 +89,6 @@ function Viewpost({history}){
         }
       }
     }
-    console.log(comments);
     return(
         <>
             <Navbar/>
@@ -103,7 +101,7 @@ function Viewpost({history}){
                 comments.map((e)=>{
                   return(
                       <>
-                        <Comment blog_id={data._id} comment_id={e._id} Author_id={data.userid} commentor_id={e.user_id} Admin_id={Admin_id} text={e.comment} username={e.username} user_id={e.user_id} date={e.Date}/>
+                        <Comment image={e.user_photo} blog_id={data._id} comment_id={e._id} Author_id={data.userid} commentor_id={e.user_id} Admin_id={Admin_id} text={e.comment} username={e.username} user_id={e.user_id} date={e.Date}/>
                       </>
                     )
                   

@@ -8,7 +8,6 @@ import { Link, useParams } from 'react-router-dom';
 
 import Posts from "../posts/posts";
 import {Serverport} from "../../server_url";
-// const Serverport="https://dot-blog.herokuapp.com";
 function Filter() {
 
     const params = useParams();
@@ -29,7 +28,6 @@ function Filter() {
     },[params.option])
 
    const handleCategory= async()=>{
-      // console.log("nbvbbnnb");
    }
 
   return (

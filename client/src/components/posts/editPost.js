@@ -5,7 +5,6 @@ import axios from 'axios';
 import Loader from "../loader";
 import "../../style/createpost.css";
 import {Serverport} from "../../server_url";
-// const Serverport="https://dot-blog.herokuapp.com";
 function Editpost({history}){
 
     const params = useParams();
@@ -56,7 +55,6 @@ function Editpost({history}){
             const res=await axios.post(`${Serverport}/photo/blog`,fd,config);
             await setUrl(res.data);
             setFilename('');
-            // console.log(imgUrl);
             setLoading(false);
             
         }

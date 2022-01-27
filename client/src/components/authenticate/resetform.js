@@ -4,7 +4,7 @@ import {  useParams } from 'react-router-dom';
 import axios from "axios";
 import "../../style/Forgetform.css";
 import Loader from "../loader";
-const Serverport="https://dot-blog.herokuapp.com";
+import {Serverport} from "../../server_url";
 function Resetform({history}){
     const [pass,setPass]=useState("");
     const [cpass,setCpass]=useState("");

@@ -7,7 +7,6 @@ import { useParams } from 'react-router-dom';
 import Posts from "../posts/posts";
 import "../../style/posts.css";
 import {Serverport} from "../../server_url";
-// const Serverport="https://dot-blog.herokuapp.com";
 function Userprofile({history}){
     const [loading, setLoading]=useState(false);
     const params = useParams();
@@ -17,14 +16,12 @@ function Userprofile({history}){
         setLoading(true);
         await axios.get(`${Serverport}/user/${params.id}`)
           .then(res => {
-            // console.log(res); 
             setData(res.data);
             setLoading(false);
           })
           .catch((err=>{
             console.log(err);
             setLoading(false);
-            // setErrorpage(true);
           }))
     },[])
     return(

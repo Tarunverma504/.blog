@@ -4,8 +4,7 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import Loader from "../loader";
-// const Serverport="https://dot-blog.herokuapp.com";
-const Serverport="http://localhost:8000";
+import {Serverport} from "../../server_url";
 function Signup({history}) {
     const [username,setUsername]=useState("");
     const [email,setEmail]=useState("");
@@ -19,7 +18,6 @@ function Signup({history}) {
         password:pass,
         email:email
       }
-      // console.log(obj);
       const config={
         headers: {
           'Content-Type': 'application/json',

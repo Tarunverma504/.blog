@@ -4,7 +4,6 @@ import { Link} from 'react-router-dom';
 import "../style/createpost.css";
 import "../style/error.css";
 import {Serverport} from "../server_url";
-// const Serverport="https://dot-blog.herokuapp.com";
 function Errorpage({history}){
     return(
         <>

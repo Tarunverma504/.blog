@@ -3,7 +3,7 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
 import "../../style/Forgetform.css";
 import Loader from "../loader";
-const Serverport="https://dot-blog.herokuapp.com";
+import {Serverport} from "../../server_url";
 function Forget({history}){
     const [email,setEmail]=useState("");
     const [errmsg,setErrmsg]=useState("");

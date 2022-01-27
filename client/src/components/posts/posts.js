@@ -7,7 +7,6 @@ function Posts(props){
         <>
             <Link to={`/view/blog/${props.blog_id}`} className="link-btn ">
             <div className="card">
-                {/* <img src={image1}/> */}
                 <div className="card-img">
                     <img src={props.image}/>
                 </div>

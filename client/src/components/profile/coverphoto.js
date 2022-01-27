@@ -1,10 +1,8 @@
 import "../../style/photo-upload.css";
 import React ,{useState,useEffect} from "react";
-// import { Link } from "react-router-dom";
 import axios from 'axios';
 import Loader from "../loader";
 import {Serverport} from "../../server_url";
-// const Serverport="https://dot-blog.herokuapp.com";
 function Coverphoto({history}){
     const [profile,setProfile]=useState({});
     const [filename,setFilename]=useState('');
@@ -23,7 +21,6 @@ function Coverphoto({history}){
     const handleSubmit = async(e) => {
         setLoading(true);
         e.preventDefault();
-        // console.log(profile);
         const fd = new FormData();
         fd.append("name",filename);
         fd.append("cover",profile);
@@ -33,10 +30,8 @@ function Coverphoto({history}){
             }
           }
           try{
-            //   console.log(fd);
               
             const res=await axios.post(`${Serverport}/coverphoto/${userid}`,fd,config);
-            // setErrmsg("");
             const dummy={
                 "user_id":res.data._id,
                 "username":res.data.username,
@@ -44,15 +39,12 @@ function Coverphoto({history}){
                 "cover__photo":res.data.cover_photo,
               }
             await sessionStorage.setItem("UserData",JSON.stringify(dummy));
-            // console.log(res.data.cover_photo);
             alert("Profile Updated :)");
             setLoading(false);
             history.push('/');
-            // console.log(res);
           }
           
           catch(err){
-            // setErrmsg("*"+err.response.data.message);
             setLoading(false);
             alert(err.response.data.message);
             console.log(err.response.data.message);

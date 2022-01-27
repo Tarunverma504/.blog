@@ -4,8 +4,7 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import Loader from "../loader";
-// const Serverport="https://dot-blog.herokuapp.com";
-const Serverport="http://localhost:8000";
+import {Serverport} from "../../server_url";
 function Login({history}) {
    
     const [username,setUsername]=useState("");
@@ -18,7 +17,6 @@ function Login({history}) {
           user:username,
           password:pass
         }
-        // console.log(obj);
         const config={
           headers: {
             'Content-Type': 'application/json',
@@ -40,7 +38,6 @@ function Login({history}) {
           "cover__photo":res.data.cover_photo,
         }
         sessionStorage.setItem("UserData",JSON.stringify(dummy));
-        //sessionStorage.removeItem("UserData");
         const r=sessionStorage.getItem("UserData");
         if(r==null){
           console.log("empty");

@@ -8,8 +8,6 @@ import Posts from "../posts/posts";
 import "../../style/posts.css";
 import {Serverport} from "../../server_url";
 
-// const Serverport="https://dot-blog.herokuapp.com";
-
 function Adminprofile({history}){
     const [Admin,setAdmin]=useState({});
     const [loading, setLoading]=useState(false);
@@ -24,9 +22,7 @@ function Adminprofile({history}){
           history.push("/login");
         }
         else{
-          // console.log("data");
           const temp=JSON.parse(r);
-        //   console.log(user.username);
           const dummy={
             "user_id":temp.user_id,
             "username":temp.username,
@@ -37,18 +33,15 @@ function Adminprofile({history}){
            
           await axios.get(`${Serverport}/admin/${temp.user_id}`)
           .then(res => {
-            // console.log(res); 
             setData(res.data);
             setLoading(false);
           })
           .catch((err=>{
             console.log(err);
             setLoading(false);
-            // setErrorpage(true);
           }))
         }
       },[])
-      // console.log(data.posts);
     return(
         <>
           {loading?<Loader/>:<>

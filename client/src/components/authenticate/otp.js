@@ -4,8 +4,7 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { useParams } from 'react-router-dom';
 import axios from "axios";
 import Loader from "../loader";
-// const Serverport="https://dot-blog.herokuapp.com";
-const Serverport="http://localhost:8000";
+import {Serverport} from "../../server_url";
 function Otp({history}) {
     const [otp,setOtp]=useState("");
     const [loading, setLoading]=useState(false);
@@ -31,7 +30,6 @@ function Otp({history}) {
           history.push('/login');
         }
         catch(err){
-          //console.log(err.response.data.message);
           setLoading(false);
           alerting(err.response.data.message);
         }
